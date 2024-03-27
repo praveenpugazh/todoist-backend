@@ -6,6 +6,7 @@ import { logger } from './middlewares/logger.js'
 import ErrorHandler from './middlewares/errorHandler.js'
 import { dbConnect } from './config/config.js'
 import cors from 'cors'
+import { validateToken } from './middlewares/validateTokenHandler.js'
 
 const app = express()
 app.use(express.json())
