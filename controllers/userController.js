@@ -56,7 +56,7 @@ export const loginUser = asyncHandler(async (req, res) => {
     res.status(401)
     throw new Error('Error with access token')
   }
-  res.json({ email, accessToken })
+  res.json({ name: user.name, email, accessToken })
 })
 //desc get current user data
 //@route GET /api/user/register
